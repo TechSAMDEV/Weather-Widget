@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: linear-gradient(120deg, hsl(217, 96%, 81%) 0%, hsl(199, 88%, 87%) 100%);
+}
+
+body {
+   font-family: "Roboto", sans-serif;
+   background: var(--backgroundColor);
+}
+
+form {
+    margin: 100px auto 30px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background-color: var(--backgroundColor);
+    outline: none;
+}
+
+form input {
+    border-bottom: 1px solid #000;
+    width: 40%;
+    font-size: 2.5em;
+}
+
+input:focus {
+    background-color: var(--backgroundColor);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--backgroundColor);
+}
+
+.fa {
+    font-size: 2em;
+    transform: rotate(45deg);
+}
+
+.card {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(0, 191, 255, 0.6);
+}
+
+.card .items.city {
+    padding: 100px;
+    border-right: 1px solid #000;
+}
+
+.card .items .cityName {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.card .items .weatherData {
+    padding: 20px;
+    line-height: 50px;
+}
+
+.card .items .weatherData p {
+    font-size: 1.5em;
+}
+
+.card .items .weatherData p #emoji {
+    font-size: 1.5em;
+}
+
+@media (max-width: 500px) {
+    form input {
+        width: 80%;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .card .items.city {
+        padding: 30px;
+    }
+
+    .card .items.city .cityName h1 {
+        font-size: 1.5em;
+    }
+
+    .card .items .weatherData {
+        padding: 10px;
+        line-height: 40px;
+    }
+}
