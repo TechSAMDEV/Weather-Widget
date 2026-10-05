@@ -9,13 +9,16 @@
 }
 
 body {
-   font-family: "Roboto", sans-serif;
-   background: var(--backgroundColor);
+    font-family: "Roboto", sans-serif;
+    background: var(--backgroundColor);
 }
 
 form {
     margin: 100px auto 30px;
     width: 90%;
+}
+
+form div {
     display: flex;
     align-items: center;
 }
@@ -28,7 +31,7 @@ input {
 
 form input {
     border-bottom: 1px solid #000;
-    width: 40%;
+    width: 50%;
     font-size: 2.5em;
 }
 
@@ -40,6 +43,12 @@ button {
     cursor: pointer;
     border: none;
     background-color: var(--backgroundColor);
+}
+
+#status {
+    font-size: 0.9em;
+    color: red;
+    margin-top: 10px;
 }
 
 .fa {

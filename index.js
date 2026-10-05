@@ -13,6 +13,7 @@ async function getWeatherData(city) {
     const weather = document.getElementById("weather");
     const emoji = document.getElementById("emoji");
     const temperature = document.getElementById("temp");
+    const status = document.getElementById("status");
 
 
     try {
@@ -20,8 +21,11 @@ async function getWeatherData(city) {
 
         if (!response.ok) {
             console.log(`HTTP ERROR: ${response.status}`);
+            status.textContent = "Error fetching weather data!";
             return;
-        }
+        } 
+
+        status.textContent = ""; // Clear any previous error message
 
         let data = await response.json();
         let weather_report = data.weather[0];
