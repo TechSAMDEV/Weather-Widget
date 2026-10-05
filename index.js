@@ -5,7 +5,7 @@ const apiKey = "dfc92b069ec7442ad3f227aea7aa0d8d";
 
 async function getWeatherData(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    
+
     const city_name = city.toUpperCase();
 
     const eyebrown = document.getElementById("eyebrown");
